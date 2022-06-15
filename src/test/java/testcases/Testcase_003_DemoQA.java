@@ -9,7 +9,33 @@ public class Testcase_003_DemoQA {
 
 	public static void main(String arg[]) throws InterruptedException {
 
-		Salman();
+		//Create the driver instance
+		String driverPath = "E:\\Technomatic\\git\\Selenium_Project\\drivers\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", driverPath);
+		WebDriver driver = new ChromeDriver();
+
+		driver.get("https://demoqa.com/automation-practice-form");
+		driver.manage().window().maximize();
+
+		String url = driver.getCurrentUrl();
+		System.out.println(url);
+
+		String title = driver.getTitle();
+		System.out.println(title);
+
+		driver.findElement(By.id("firstName")).sendKeys("Mohammed");
+		driver.findElement(By.id("lastName")).sendKeys("M");
+
+		driver.findElement(By.id("userEmail")).sendKeys("abc@xyz.com");
+
+		driver.findElement(By.xpath("//label[@for='gender-radio-1']")).click();
+
+		driver.findElement(By.xpath("//input[@id='userNumber']")).sendKeys("123456789");
+
+		//submit
+		driver.findElement(By.xpath("//button[@id='submit']")).click();
+
+		//driver.close();
 
 	}
 
@@ -29,7 +55,7 @@ public class Testcase_003_DemoQA {
 		driver.findElement(By.id("userNumber")).sendKeys("2352");
 		driver.findElement(By.xpath("//label[@for='hobbies-checkbox-1']")).click();
 		driver.findElement(By.id("currentAddress")).sendKeys("jhbdas");
-		
+
 		driver.close();
 	}
 
@@ -74,43 +100,6 @@ public class Testcase_003_DemoQA {
 		driver.findElement(By.xpath("//button[@id='submit']")).click();
 
 	}
-
-	public void Mohammed() {
-		//Create the driver instance
-		String driverPath = "E:\\Technomatic\\git\\Selenium_Project\\drivers\\chromedriver.exe";
-		System.setProperty("webdriver.chrome.driver", driverPath);
-		WebDriver driver = new ChromeDriver();
-
-		driver.get("https://demoqa.com/automation-practice-form");
-		driver.manage().window().maximize();
-
-		String url = driver.getCurrentUrl();
-		System.out.println(url);
-
-		String title = driver.getTitle();
-		System.out.println(title);
-
-
-
-		driver.findElement(By.id("firstName")).sendKeys("Mohammed");
-		driver.findElement(By.id("lastName")).sendKeys("M");
-
-		driver.findElement(By.id("userEmail")).sendKeys("abc@xyz.com");
-
-
-
-		driver.findElement(By.xpath("//label[@for='gender-radio-1']")).click();
-
-		driver.findElement(By.xpath("//input[@id='userNumber']")).sendKeys("123456789");
-
-		//submit
-		driver.findElement(By.xpath("//button[@id='submit']")).click();
-
-
-		//driver.close();
-	}
-
-
 
 
 }
