@@ -35,7 +35,7 @@ public class Testcase_003_DemoQA {
 		//submit
 		driver.findElement(By.xpath("//button[@id='submit']")).click();
 
-		//driver.close();
+		driver.close();
 
 	}
 
