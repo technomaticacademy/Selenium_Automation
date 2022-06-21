@@ -9,9 +9,9 @@ public class Mohd_Liberty_001 {
 		
 		com.initDriver();
 		
-		com.launchURL("https://www.libertymutual.com/");
 		
-		com.liberty_quote();
+		
+		
 
 	}
 
