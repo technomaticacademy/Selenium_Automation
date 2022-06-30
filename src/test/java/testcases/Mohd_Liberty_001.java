@@ -9,8 +9,6 @@ public class Mohd_Liberty_001 {
 		
 		com.initDriver();
 		
-		
-		
 		System.out.println("Modified");
 
 	}
